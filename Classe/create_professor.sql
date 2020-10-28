@@ -1,8 +1,21 @@
-CREATE TABLE 
-	Professor
-	(
+USE [Aula]
+GO
 
-	id_Professor Int, 
-	Nome_Professor varchar (100)
+/****** Object:  Table [dbo].[Professor]    Script Date: 27/10/2020 22:35:18 ******/
+SET ANSI_NULLS ON
+GO
 
-	);
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Professor](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] [varchar](100) NULL,
+ CONSTRAINT [PK_Professor] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
